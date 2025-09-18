@@ -42,13 +42,13 @@
 <body>
 <span style="font-size: 2.34375rem; font-weight: 700;">Intro to GitHub</span><br>
 
-<p>Latest version by: <strong><a href="https://www.city.ac.uk/about/people/academics/giacomo-tarroni">Giacomo
-    Tarroni</a></strong></p>
+<p>Latest version by: <strong><a href="https://www.city.ac.uk/about/people/academics/alexis-pister">Alexis Pister</a></strong></p>
 
 <p>Original materials by: <strong><a href="https://www.city.ac.uk/about/people/academics/radu-jianu">Radu
-    Jianu</a></strong></p>
+    Jianu</a></strong> and <strong><a href="https://www.city.ac.uk/about/people/academics/giacomo-tarroni">Giacomo Tarroni</a></strong>
+</p>
 
-<p>Date: 20 Sep 2024</p>
+<p>Date: 20 Sep 2025</p>
 
 <h2 id="toc_1">Understanding Git and GitHub</h2>
 
@@ -146,74 +146,88 @@
 <p>Let's now install git/GitHub on your computer.</p>
 
 <ol>
-    <li><p><strong>Create a GitHub account linked to your City email address</strong>: Please do not reuse GitHub
-        accounts that you may already have! It is essential that you (create and) use an account that is linked to your
-        City account. Navigate to a <a href="https://www.github.com">www.github.com</a> and follow instructions under
+    <li><p><strong>Create a GitHub account linked to your City email address</strong>:
+<!--        Please do not reuse GitHub accounts that you may already have!-->
+<!--        It is essential that you (create and) use an account that is linked to your City account. !-->
+        Navigate to a <a href="https://www.github.com">www.github.com</a> and follow instructions under
         the 'Sign Up' button. It should be straightforward: you will need to provide an email, a password, and a
         username. Make sure to use your City email address and provide a username that resembles your real name: </p>
 
         <p><img src="./img/create-account.png" alt="" width="399" height="229" role="presentation"
                 class="img-fluid atto_image_button_text-bottom"><br></p></li>
-    <li><p><strong>Install GitHub Desktop</strong>: GitHub provides a desktop interface that allows you to interact with
-        GitHub services. To install it navigate to <a href="/download">desktop.github.com</a> and download the installer
+
+
+    <li><p><strong>Install VS Code</strong>: VS Code is a widely used code editor that has integrated Git capabilities.
+        We will see how to use Git/Github in a VSCode project. To install VS Code navigate to <a href="https://code.visualstudio.com/Download">this link</a> and download the installer
         based on your operating system. Once the download finishes, install the application. In Windows you would launch
         the downloaded executable file; in Mac OS you would first drag the downloaded file into the Application folder,
-        then double click it there and select open to allow it to run. Finally sign-in with the GitHub credentials
-        you've created in step 1.</p>
+        then double click it there and select open to allow it to run.</p>
 
-        <p><img src="./img/githubdesktop.png" alt="" width="1199" height="725" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p></li>
-    <li><p><strong>Get your basic Github sketch repository by copying a template that we created for you</strong>: Your
-        resulting repository will essentially be a project that lives on GitHub and contains a very basic sketch
-        (Processing code). You will work on similar projects throughout the Creative Coding module. Make sure you are
-        logged into your City Github account on your default browser. Follow the link below and accept the project
-        'assignment'. This will automatically create a repository called first-sketch-your-github-username for you
-        (after pressing some buttons and refreshing the browser a few times you should ultimately get a confirmation
-        message like the one in the image below).</p>
 
-        <p><a href="https://classroom.github.com/a/aofAa1pi">https://classroom.github.com/a/aofAa1pi</a></p>
+    <li><p><strong>Install Git</strong>: To use Git on VS Code you first need to install Git. You can find the installer on <a href="https://git-scm.com/downloads">this link</a>. Download the installer
+        based on your operating system. For Windows, the Windows/x64 Setup link is the default for most computer. Download and run the .exe file to install Git, and do not change the default values of the installer.
+    For Mac, the homebrew installation is preferred. Install homebrew with the command "brew install git"</p>
 
-        <p><img src="./img/accept.png" alt="" width="300" height="166" role="presentation"
-                class="img-fluid atto_image_button_text-bottom">&nbsp;<img src="./img/accept2.png" alt="" width="300"
-                                                                           height="161" role="presentation"
-                                                                           class="img-fluid atto_image_button_text-bottom"><br>
-        </p>
+    <p>
+    <video controls="controls" width="800" height="600" name="Video Name">
+    <source src="img/mac.brewInstallGit.mov">
+    </video>
+    </p>
+</li>
 
-        <p><strong>Copy the link above</strong>. If you then click on it, you should see your online repo with the basic
-            sketch:</p>
 
-        <p><img src="./img/repo.png" alt="" width="800" height="532" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p></li>
-    <li><p><strong>Clone the repo on your computer</strong>: We will now clone this repository onto your computer and
-        ask GitHub Desktop to manage it. Head into GitHub Desktop and select File -&gt; Clone Repository. In the dialog
-        that opens, if there are different options (GitHub.com, GitHub Enterprise, URL, ...) choose the URL option. Then
-        paste the link to your online repo (the link that you just copied above) into the Repository URL box. Adjust the
-        Local Path with a suitable location: we will use this for the whole of Creative Coding. Click the Clone button.
-        In the next dialog, select "for my own purposes". Find the local version of the repo and view it in a File
-        Explorer/Finder window. Its structure should mirror the online version.</p>
+    <li><p><strong>Initialize a Git project in VS Code</strong> First you need to create a Folder (for example named “Portfolio”) somewhere in your computer.
+In VSCode, go to File > Open Folder, and select the folder to open the project. Select the left side menu dedicated to Git and click “Initialize the repository” to initialize the local Git repository.</p>
 
-        <p><img src="./img/clone.png" alt="" width="1199" height="624" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p></li>
-    <li><p><strong>Lets make our first GitHub-tracked change</strong>: Open coder_info.txt with any text editor. Add
-        your name on the first line and your email on the second. Now it's time to commit this change [meaning: make it
-        an 'official', <em>GitHub-tracked change to our project</em>] and push it to the online repo [meaning: save the
-        change onto the GitHub server too]. So:</p>
+        <p><img src="./img/projectCreation.gif" alt="" width="1199" height="725" role="presentation"
+                class="img-fluid atto_image_button_text-bottom"><br></p>
+    </li>
 
-        <ul>
-            <li>Open GitHub Desktop and notice that it has realised we made this change (and maybe others) to the
-                project directory. Add a title for the commit, and click commit. GitHub will make those changes
-                permanent and then remove them from the change-list - they are now 'committed'.
-            </li>
-            <li>Next we want to synchronize our local project (and implicitly the changes we just committed) to the
-                online repo. We do so by choosing Repository -&gt; Push.
-            </li>
-        </ul>
+    <li><p><strong>Create a file and commit the changes.</strong> The first step is to create a new file in VS code, for example for your CV.
+        You can do this by clicking on explorer menu (CTRL+SHIFT+E) and then "new file". Name the file "CV.txt" for your CV, and add some content in the file, such as your experiences and hobbies for your CV.
 
-        <p>And now we are done - you can navigate to the online version of your repo and check that the coder_info.txt
-            there contains your name and email!</p>
+        To save the changes you did with Git, click to the source control menu  on the right (CTRL+SHIFT+G). You first need to <strong>stage</strong> the changes by clicking on the “+” near your file name.
+        This means that you want the change related to this file to be saved in your next commit.
+        Then, write a commit message, such as “first commit” in the commit box, and commit the changes by pressing the “Commit” button.
+    </p>
 
-        <p><img src="./img/edit.png" alt="" width="1200" height="664" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p></li>
+        <p><img src="./img/2-fileCreation.gif" alt="" width="1199" height="725" role="presentation"
+        class="img-fluid atto_image_button_text-bottom"><br></p>
+
+        <p><img src="./img/3-commitFile.gif" alt="" width="1199" height="725" role="presentation"
+                class="img-fluid atto_image_button_text-bottom"><br></p>
+    </li>
+
+    <li><p><strong>Create a file and commit the changes.</strong> The first step is to create a new file in VS code, for example for your CV.
+        You can do this by clicking on explorer menu (CTRL+SHIFT+E) and then "new file". Name the file "CV.txt" for your CV, and add some content in the file, such as your experiences and hobbies for your CV.
+
+        To save the changes you did with Git, click to the source control menu  on the right (CTRL+SHIFT+G). You first need to <strong>stage</strong> the changes by clicking on the “+” near your file name.
+        This means that you want the change related to this file to be saved in your next commit.
+        Then, write a commit message, such as “first commit” in the commit box, and commit the changes by pressing the “Commit” button.
+    </p>
+
+        <p><img src="./img/2-fileCreation.gif" alt="" width="1199" height="725" role="presentation"
+        class="img-fluid atto_image_button_text-bottom"><br></p>
+
+        <p><img src="./img/3-commitFile.gif" alt="" width="1199" height="725" role="presentation"
+                class="img-fluid atto_image_button_text-bottom"><br></p>
+    </li>
+
+
+    <li><p><strong>Publish your project on Github</strong> by clicking on the github button on the repository menu and by selecting <strong>publish to Github public repository</strong>.
+    </p>
+        <p><img src="./img/5-githubPublish.gif" alt="" width="1199" height="725" role="presentation"
+        class="img-fluid atto_image_button_text-bottom"><br></p>
+    </li>
+
+    <li><p><strong>Create a new commit and push it to Github.</strong> Now that our project is synced with a Github repository, you will also need to push your commits after
+        your changes to sync up your local repository with the Github (remote) repository. For that, modify your CV file and add one row. Next, commit your changes as before.
+        At this step you Git repository is up to date, but the remote one is not updated yet. To do that, you need to <strong>push</strong> your commit to Github.
+        In VS Code, in the source control Menu, you simply have to click on the <strong>Sync-up</strong> button.
+    </p>
+        <p><img src="./img/6-commitPush.gif" alt="" width="1199" height="725" role="presentation"
+        class="img-fluid atto_image_button_text-bottom"><br></p>
+    </li>
 </ol>
 
 <h2 id="toc_5">Further reading</h2>
