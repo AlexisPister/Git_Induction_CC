@@ -34,6 +34,7 @@
     <style>
         body {
             margin: 2rem;
+            font-size: 13pt;
         }
     </style>
 
@@ -141,9 +142,11 @@
 <p><img src="./img/gitHub.Day3.png" alt="" width="1201" height="677" role="presentation"
         class="img-fluid atto_image_button_text-bottom"><br></p>
 
-<h2 id="toc_4">Installing git/GitHub</h2>
+<h2 id="toc_4">Installation</h2>
 
-<p>Let's now install git/GitHub on your computer.</p>
+<p>Let's now install Git and setup a Github account. Git can be used in different ways: on the command line, with a graphical interface, or inside an integrated development environment (IDE).
+    In this page, we will learn how to use git inside VS Code, a renown IDE with integrated Git capabilities.
+</p>
 
 <ol>
     <li><p><strong>Create a GitHub account linked to your City email address</strong>:
@@ -172,37 +175,31 @@
     <video controls="controls" width="800" height="600" name="Video Name">
     <source src="img/mac.brewInstallGit.mov">
     </video>
+        Git installation on Mac
+
     </p>
 </li>
+</ol>
 
 
-    <li><p><strong>Initialize a Git project in VS Code</strong> First you need to create a Folder (for example named “Portfolio”) somewhere in your computer.
+<h2 id="toc_4">Installation</h2>
+
+<p>Let's now use Git with VSCode to create a project. We will create a portfolio public project that stores your CV.
+</p>
+
+<ol>
+    <li><p><strong>Initialize a Git project in VS Code</strong> First you need to create a Folder (named “Portfolio”) somewhere in your computer.
 In VSCode, go to File > Open Folder, and select the folder to open the project. Select the left side menu dedicated to Git and click “Initialize the repository” to initialize the local Git repository.</p>
 
         <p><img src="./img/projectCreation.gif" alt="" width="1199" height="725" role="presentation"
                 class="img-fluid atto_image_button_text-bottom"><br></p>
     </li>
 
-    <li><p><strong>Create a file and commit the changes.</strong> The first step is to create a new file in VS code, for example for your CV.
-        You can do this by clicking on explorer menu (CTRL+SHIFT+E) and then "new file". Name the file "CV.txt" for your CV, and add some content in the file, such as your experiences and hobbies for your CV.
+    <li><p><strong>Create a file and commit the changes.</strong> The first step is to create a new file in VS code, which will be your CV.
+        You can do this by clicking on explorer menu (CTRL+SHIFT+E) and then "new file". Name the file "CV.txt" for your CV, and add some content in the file, such as your experiences, projects, and hobbies.
 
         To save the changes you did with Git, click to the source control menu  on the right (CTRL+SHIFT+G). You first need to <strong>stage</strong> the changes by clicking on the “+” near your file name.
-        This means that you want the change related to this file to be saved in your next commit.
-        Then, write a commit message, such as “first commit” in the commit box, and commit the changes by pressing the “Commit” button.
-    </p>
-
-        <p><img src="./img/2-fileCreation.gif" alt="" width="1199" height="725" role="presentation"
-        class="img-fluid atto_image_button_text-bottom"><br></p>
-
-        <p><img src="./img/3-commitFile.gif" alt="" width="1199" height="725" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p>
-    </li>
-
-    <li><p><strong>Create a file and commit the changes.</strong> The first step is to create a new file in VS code, for example for your CV.
-        You can do this by clicking on explorer menu (CTRL+SHIFT+E) and then "new file". Name the file "CV.txt" for your CV, and add some content in the file, such as your experiences and hobbies for your CV.
-
-        To save the changes you did with Git, click to the source control menu  on the right (CTRL+SHIFT+G). You first need to <strong>stage</strong> the changes by clicking on the “+” near your file name.
-        This means that you want the change related to this file to be saved in your next commit.
+        This means that you want the changes related to this file to be saved in your next commit.
         Then, write a commit message, such as “first commit” in the commit box, and commit the changes by pressing the “Commit” button.
     </p>
 
@@ -215,6 +212,8 @@ In VSCode, go to File > Open Folder, and select the folder to open the project. 
 
 
     <li><p><strong>Publish your project on Github</strong> by clicking on the github button on the repository menu and by selecting <strong>publish to Github public repository</strong>.
+        Selecting the public option means that the repository is public and anyone can see your code! Selecting the private option would mean that only you can see the code, and the collaborators that you invite in the project.
+
     </p>
         <p><img src="./img/5-githubPublish.gif" alt="" width="1199" height="725" role="presentation"
         class="img-fluid atto_image_button_text-bottom"><br></p>
