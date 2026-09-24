@@ -41,207 +41,57 @@
 </head>
 
 <body>
-<span style="font-size: 2.34375rem; font-weight: 700;">Intro to GitHub</span><br>
+<span style="font-size: 2.34375rem; font-weight: 700;">Introduction to Git and Github</span><br>
 
 <p>Latest version by: <strong><a href="https://www.city.ac.uk/about/people/academics/alexis-pister">Alexis Pister</a></strong></p>
 
-<p>Original materials by: <strong><a href="https://www.city.ac.uk/about/people/academics/radu-jianu">Radu
-    Jianu</a></strong> and <strong><a href="https://www.city.ac.uk/about/people/academics/giacomo-tarroni">Giacomo Tarroni</a></strong>
-</p>
+<p>Date: Sep. 2026</p>
 
-<p><a href="https://docs.google.com/presentation/d/11JRlentiFdLeoJFYU4I14DhkJXVg_K1JEGYda3HUSbg/edit?usp=sharing ">
-    Link to the slides</a>
-</p>
+<p>Git is a central tool in Computer Science to manage small to large scale projects, in collaboration.<br>
+    This series of videos will explain to you what are Git/Github, and why it is widely used in programming, but also how you can use it to construct an online presence and portfolio. </p>
 
-<p>Date: 20 Sep 2025</p>
+<p>After watching these videos you should:</p>
 
-<h2 id="toc_1">Understanding Git and GitHub</h2>
+<ul>
+    <li><strong>Know What Git and GitHub are</strong>, and why to use them</li>
+    <li><strong>Know how to create a GitHub account</strong>, and how to use it as a portfolio</li>
+    <li><strong>Have created your first Git/Github project</strong> in VS Code for the Creative Coding module</li>
+    <li><strong>Have made your first Git commit</strong> in your project</li>
+    <li><strong>Know how to use Git</strong> in a project</li>
+</ul>
 
-<h3 id="toc_2">What's the short story of git and GitHub?</h3>
+<p>Written Documentation to do these steps is also available <a href="writtenDoc.html">here</a>.</p>
 
-<p><em>git</em> is an open source versioning software: it allows you to store and back-up the code you write as part of
-    a software project; it will also monitor and record changes you make to your code and allow you to earmark <em>versions</em>
-    of your project - states of your code at a given time. This way, you can track how your project evolves over time
-    (e.g., see changes made between versions), and revert back to a previous version whenever necessary (e.g., if you
-    messed something up).</p>
-
-<p>At the heart of any project is a <em>repository</em> (<em>repo</em> in short) - you can think of this as a folder
-    associated with your project and monitored/managed by <em>git</em>. The repository may contain code, regular text
-    files, images and other project resources. It also contains some hidden files that <em>git</em> uses to manage
-    versions and changes.</p>
-
-<p>A repository can live on your computer or on the web. <em>GitHub</em> provides online space for people who want to
-    create and store repositories (i.e., software projects) online and is configured to work with <em>git</em>. Note the
-    difference between <em>git</em> - the software that implements the versioning control of a project - and
-    <em>GitHub</em> - just an online space where <em>git</em>-managed projects can live.</p>
-
-<p>Sometimes it is desirable to have the same project available in multiple places: on your office machine, on your
-    personal computer, and on <em>GitHub</em> for safe keeping. This can be achieved by "<em>cloning</em>": a project
-    repository that exists somewhere else (for instance on <em>GitHub</em>) can be <em>cloned</em> on your computer. Of
-    course, it is desirable that the different clones of a repository are in sync, that changes to one version are
-    mirrored into the others. This is managed manually with <em>push</em> and <em>pull</em> operations: if you suspect
-    that a change was made to the main repository (ex: on <em>GitHub</em>) you can pull these changes onto your machine;
-    after you make your own changes to the code you push those changes to the main repository.</p>
-
-<p>Finally, what constitutes a 'change' is also managed manually. Since code development is quite messy and involves
-    repeated trial and error we don't want to count any small edit we do as a code change that <em>git</em> should
-    record. Instead, we can choose when to earmark a code-development point as worthy of <em>git</em> management by
-    doing a '<em>commit</em>'. Upon a commit <em>git</em> will essentially save the state of the project at that time
-    and allow you to restore the project to that point a later date if you need to. You can think of this as hitting the
-    save button in Word or Photoshop.</p>
-
-<p>It is important to note that only <em>committed</em> changes can be pushed or pulled from a repository! Thus the
-    typical operations one would do when initiating a change to one's code are:</p>
-
-<ol>
-    <li><strong>Pull</strong> potential changes from the main repository into your current working environment. This is
-        only necessary if there's an expectation that someone else might have changed the main repository, either
-        yourself from a different machine or a potential project collaborator.
-    </li>
-    <li>Change code and resources of the project as you need.</li>
-    <li><strong>Commit</strong> changes you are happy with (might be multiple times during a work session).</li>
-    <li><strong>Push</strong> changes to the main repository once done.</li>
-</ol>
-
-<p>It may help you to think of <em>git</em> and <em>GitHub</em> as a more manual analogue to Google Drive or Microsoft
-    One Drive. These services allow you to have synchronized directories on multiple devices and the cloud: files are
-    duplicated across multiple devices and changes made to those files on any device are mirrored onto the others. This
-    is similar to how <em>git/GitHub</em> work with the distinction that changes need to be committed and manually
-    synchronized via pushing and pulling (though changes also need to be saved before Google or Microsoft mirror them
-    across devices). One of the advantages of <em>git</em> is that it allows you to revert your project back to any past
-    commit point. Another one is that it allows multiple developers to work on the same project simultaneously by
-    managing changes through <em>branching</em> and <em>merging</em>, helping to resolve conflicts and keep the project
-    coordinated (something we won't likely experiment with in <em>Creative Coding</em>, but that you will definitely
-    encounter in your career as programmers).</p>
-
-<h3 id="toc_3">Let's imagine a practical scenario</h3>
-
-<p>You want to start a new project on your home computer, so you create a new project '<em>repository</em>' (in short
-    <em>repo</em>) on <em>GitHub</em>. Think of this as an empty directory online. You can't write code on
-    <em>GitHub</em> so this is really just to reserve online space to store and manage your project. You then
-    <em>clone</em> your repository onto your work computer. This will create a directory on your computer that mirrors
-    the one online. You can start adding and modifying code files into that directory. At the end of the day or whenever
-    you are happy with how your project progressed, you <em>commit</em> all changes you've made. This sort of saves
-    those changes and earmarks the state of the project at that time as a version - at this point this only happens on
-    your work computer. You can continue making new changes on your work computer and committing the ones you are happy
-    with. At some point though you will probably want to save all those changes and versions to your online repository
-    too. You run a <em>push</em> command - this will synchronize the two repos; all changes and version you created on
-    your computer will be mirrored onto <em>GitHub</em>.</p>
-
-<p><img src="./img/gitHub.Day1.png" alt="" width="1201" height="677" role="presentation"
-        class="img-fluid atto_image_button_text-bottom"><br></p>
-
-<p>Next day you decide to continue the project from work. You can clone your repo on your work computer. This will take
-    the project in its current state and copy it onto your work computer. You can then make changes, commit the ones you
-    are happy with, and at the end of the day push all of them back to GitHub.</p>
-
-<p><img src="./img/gitHub.Day2.png" alt="" width="1201" height="677" role="presentation"
-        class="img-fluid atto_image_button_text-bottom"><br></p>
-
-<p>The next day, at home again, you would <em>pull</em> the repo onto your home computer to update your home-version of
-    the repo with all the changes you had made at work the day before. Then you can continue to develop the project in
-    the same way. Notice you didn't have to <em>clone</em> the repo this time, since you already had it on your
-    computer: you simply needed to fetch (<em>pull</em>) the latest changes.</p>
-
-<p><img src="./img/gitHub.Day3.png" alt="" width="1201" height="677" role="presentation"
-        class="img-fluid atto_image_button_text-bottom"><br></p>
-
-<h2 id="toc_4">Installation</h2>
-
-<p>Let's now install Git and setup a Github account. Git can be used in different ways: on the command line, with a graphical interface, or inside an integrated development environment (IDE).
-    In this page, we will learn how to use git inside VS Code, a renown IDE with integrated Git capabilities.
-</p>
-
-<ol>
-    <li><p><strong>Create a GitHub account linked to your City email address</strong>:
-<!--        Please do not reuse GitHub accounts that you may already have!-->
-<!--        It is essential that you (create and) use an account that is linked to your City account. !-->
-        Navigate to a <a href="https://www.github.com">www.github.com</a> and follow instructions under
-        the 'Sign Up' button. It should be straightforward: you will need to provide an email, a password, and a
-        username. Make sure to use your City email address and provide a username that resembles your real name: </p>
-
-        <p><img src="./img/create-account.png" alt="" width="399" height="229" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p></li>
-
-
-    <li><p><strong>Install VS Code</strong>: VS Code is a widely used code editor that has integrated Git capabilities.
-        We will see how to use Git/Github in a VSCode project. To install VS Code navigate to <a href="https://code.visualstudio.com/Download">this link</a> and download the installer
-        based on your operating system. Once the download finishes, install the application. In Windows you would launch
-        the downloaded executable file; in Mac OS you would first drag the downloaded file into the Application folder,
-        then double click it there and select open to allow it to run.</p>
-
-
-    <li><p><strong>Install Git</strong>: To use Git on VS Code you first need to install Git. You can find the installer on <a href="https://git-scm.com/downloads">this link</a>. Download the installer
-        based on your operating system. For Windows, the Windows/x64 Setup link is the default for most computer. Download and run the .exe file to install Git, and do not change the default values of the installer.
-    For Mac, the homebrew installation is preferred. Install homebrew with the command "brew install git"</p>
-
-    <p>
-    <video controls="controls" width="800" height="600" name="Video Name">
-    <source src="img/mac.brewInstallGit.mov">
-    </video>
-        Git installation on Mac
-
-    </p>
-</li>
-</ol>
-
-
-<h2>Using Git</h2>
-
-<p>Let's now use Git with VSCode to create a project. We will create a portfolio public project that stores your CV.
-</p>
-
-<ol>
-    <li><p><strong>Initialize a Git project in VS Code</strong> First you need to create a Folder (named “Portfolio”) somewhere in your computer.
-In VSCode, go to File > Open Folder, and select the folder to open the project. Select the left side menu dedicated to Git and click “Initialize the repository” to initialize the local Git repository.</p>
-
-        <p><img src="./img/projectCreation.gif" alt="" width="1199" height="725" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p>
-    </li>
-
-    <li><p><strong>Create a file and commit the changes.</strong> The first step is to create a new file in VS code, which will be your CV.
-        You can do this by clicking on explorer menu (CTRL+SHIFT+E) and then "new file". Name the file "CV.txt" for your CV, and add some content in the file, such as your experiences, projects, and hobbies.
-
-        To save the changes you did with Git, click to the source control menu  on the right (CTRL+SHIFT+G). You first need to <strong>stage</strong> the changes by clicking on the “+” near your file name.
-        This means that you want the changes related to this file to be saved in your next commit.
-        Then, write a commit message, such as “first commit” in the commit box, and commit the changes by pressing the “Commit” button.
-    </p>
-
-        <p><img src="./img/2-fileCreation.gif" alt="" width="1199" height="725" role="presentation"
-        class="img-fluid atto_image_button_text-bottom"><br></p>
-
-        <p><img src="./img/3-commitFile.gif" alt="" width="1199" height="725" role="presentation"
-                class="img-fluid atto_image_button_text-bottom"><br></p>
-    </li>
-
-
-    <li><p><strong>Publish your project on Github</strong> by clicking on the github button on the repository menu and by selecting <strong>publish to Github public repository</strong>.
-        Selecting the public option means that the repository is public and anyone can see your code! Selecting the private option would mean that only you can see the code, and the collaborators that you invite in the project.
-
-    </p>
-        <p><img src="./img/5-githubPublish.gif" alt="" width="1199" height="725" role="presentation"
-        class="img-fluid atto_image_button_text-bottom"><br></p>
-    </li>
-
-    <li><p><strong>Create a new commit and push it to Github.</strong> Now that our project is synced with a Github repository, you will also need to push your commits after
-        your changes to sync up your local repository with the Github (remote) repository. For that, modify your CV file and add one row. Next, commit your changes as before.
-        At this step you Git repository is up to date, but the remote one is not updated yet. To do that, you need to <strong>push</strong> your commit to Github.
-        In VS Code, in the source control Menu, you simply have to click on the <strong>Sync-up</strong> button.
-    </p>
-        <p><img src="./img/6-commitPush.gif" alt="" width="1199" height="725" role="presentation"
-        class="img-fluid atto_image_button_text-bottom"><br></p>
-    </li>
-</ol>
-
-<h2>What's next</h2>
-
-<p> At the end of this activity, you should have a public Github repository for your portofolio. You should update it after doing new projects and activities, or starting new hobbies!
-</p>
-
+<h4>Video 1: What are Git and Github (and why you should use it!)</h4>
 <p>
-For the Creative Coding work, you should also create a private Github repository where you will store your code and resources.
-    For this, follow the same instructions than before: create a folder called "Creative_Coding", open in in VS Code, and publish it with the Github button with the private option.
+    <video controls preload="metadata" width="800">
+        <source src="videos/V1.mp4" type="video/mp4">
+    </video>
 </p>
+
+<h4>Video 2: Setting up Git/Github</h4>
+<p>
+    <video controls preload="metadata" width="800">
+        <source src="videos/V2.mp4" type="video/mp4">
+    </video>
+</p>
+
+<h4>Video 3: Creating your first Git project</h4>
+<p>
+    <video controls preload="metadata" width="800">
+        <source src="videos/V3.mp4" type="video/mp4">
+    </video>
+</p>
+
+<h4>Video 4: Doing a git commit</h4>
+<p>
+    <video controls preload="metadata" width="800">
+        <source src="videos/V4.mp4" type="video/mp4">
+    </video>
+</p>
+
+
+<p>There will be an online Q&A session on Wednsesday 7th October. Do attend if you have any question or are stuck at any of the described steps!</p>
 
 <h2 id="toc_5">Further reading</h2>
 
@@ -263,5 +113,6 @@ For the Creative Coding work, you should also create a private Github repository
         might seem complicated, but it's really not that hard, and many software engineers use git this way. You can
         learn more starting from this <a href="https://www.youtube.com/watch?v=USjZcfj8yxE">video tutorial</a></li>
 </ol>
+
 </body>
 </html>
